@@ -84,7 +84,7 @@ Deliverables 1:
             /* eslint-disable-next line no-unused*/
         [X] 
 
-[]Model DB
+[X]Model DB
     []What data will we store?
         []Log places that people/places are not following current guidelines - TEXT 
             []Date visited -DATE/TIME
@@ -94,7 +94,7 @@ Deliverables 1:
             []Description 
 
 
-[]Setup Mongooge Model(s)
+[X]Setup Mongooge Model(s)
     []install mongoose if you do not have. 
     []Models (schema) required/true
         []log entry - 
@@ -112,7 +112,7 @@ Deliverables 1:
             []...requiredNumber,
                 []min: -180,
                 []max: 180,
-[].env file 
+[X].env file 
     []NODE_ENV=development
     []PORT=0000
     []DATABASE_URL=mongodb://localhost/maskedkaren
