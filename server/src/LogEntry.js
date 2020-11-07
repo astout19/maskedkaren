@@ -1,30 +1,50 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+
+const Schema = mongoose.Schema;
 
 const requiredString = {
-    type: String, 
-    requires: true,
+  type: String,
+  requires: true,
 };
 
 const requiredNumber = {
-    type: Number,
-    required: true,
+  type: Number,
+  required: true,
 };
 
 const logEntrySchema = new Schema({
-    title: requiredString,
-    Description: String, 
-    author: String,
-    comments: String, 
-    image: String,
-    rating: {
-        type: Number, 
-        min: [0, 'Following current County protocols'],
-        max: [3, 'Not following current County protocols'],
-        default: 0,
-    },
-    latitude: requiredNumber,
-    longitude: requiredNumber,
+  title: {
+    type: String,
+    required: true,
+  },
+  Description: String,
+  author: String,
+  comments: String,
+  image: String,
+  rating: {
+    type: Number,
+    min: [0, 'Following current County protocols'],
+    max: [3, 'Not following current County protocols'],
+    default: 0,
+  },
+  latitude: {
+    ...requiredNumber,
+    min: -90,
+    max: 90,
+  },
+  longitude: {
+    ...requiredNumber,
+    min: -180,
+    max: 180,
+  },
+  visitDate: {
+    require: true,
+    type: Date,
+  },
 }, {
-    timestamps: true,
+  timestamps: true,
 });
+
+const LogEntry = mongoose.model('LogEntry', logEntrySchema);
+
+module.exports = LogEntry;
