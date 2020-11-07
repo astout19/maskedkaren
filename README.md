@@ -21,7 +21,9 @@ Deliverables 1:
         []Paul - Front end 
         []Heather - API for guidelines
         []Marina - Data by location/Map
-        []Alexandra - Repo/Setup Server
+ alexbranch1
+        [X]Alexandra - Repo/Setup Server
+
     []A schedule for completion of various tasks
         []Paul - Saturday 11/7
         []Heather - Saturday 11/7
@@ -32,58 +34,64 @@ Deliverables 1:
         []Saturday we will come together to plan out past the Server Section of the breakdown below.    
 
 []Setup Server
-        []mkdir server
+alexbranch1
+        [X]mkdir server
     []Install Dependencies
-        []express
-        []cors
-        []morgan helmet
+        [X]express
+        [X]cors
+        [X]morgan helmet
         []parse(express.json)
-    []Install/Setup Linter
-        []eslint
-            []npx eslint --int
-            []To check syntax, find problems, and enforce code style 
-            []CommonJS (require/exports)
-            []Framework - none
-            []Typescript - no
-            []code: node
-            []style - popular style 
-                []Airbnb
-            []config file- javascript      
-        []nodemon
-        []package.json 
-            []"start": "node src/index.js",
-            []"main": "src/index.js",
-            []"dev": "nodemon src/index.js
-            "lint": "eslint src/"
-    []Setup Express App
-        []morgan () 
-            []const morgan = require('morgan');
-            []app.use(morgan('common"));
-        []helmet (add and take away headers, hackers)
-            []const helmet = require('helmet');
-            []app.use(helmet());
-        []cors (any origin can request from our backend)
-            []const cors =require('cors');
-            []app.us(cors());
-                []origin: 'http://localhost:0000',
+    [X]Install/Setup Linter
+        [X]eslint
+            [X]npx eslint --int
+            [X]To check syntax, find problems, and enforce code style 
+            [X]CommonJS (require/exports)
+            [X]Framework - none
+            [X]Typescript - no
+            [X]code: node
+            [X]style - popular style 
+                [X]Airbnb
+            [X]config file- javascript      
+        [X]nodemon
+        [X]package.json 
+            [X]"start": "node src/index.js",
+            [X]"main": "src/index.js",
+            [X]"dev": "nodemon src/index.js
+            [X]"lint": "eslint src/"
+    [X]Setup Express App
+        [X]morgan () 
+            [X]const morgan = require('morgan');
+            [X]app.use(morgan('common"));
+        [X]helmet (add and take away headers, hackers)
+            [X]const helmet = require('helmet');
+            [X]app.use(helmet());
+        [X]cors (any origin can request from our backend)
+            [X]const cors =require('cors');
+            [X]app.us(cors());
+                [X]origin: 'http://localhost:0000',
+
         []parse (express.json)
         []folder src
             []index.js
                 []const express = require('express');
-    []Setup Not Found and Error Middlewares
-        []app.get('/',(req,res))
-        []app.use((req, res,next) => {
+ alexbranch1
+    [X]Setup Not Found and Error Middlewares
+        [X]app.get('/',(req,res))
+        [X]app.use((req, res,next) => {
+
             const error = new Error('your path is not found - ${req.orignalUrl}');
             res.status(404);
             next(error);
         });
-        []Status Code 
-            []Set
-            []200 default 500
-            []NODE.ENV
+alexbranch1
+        [X]Status Code 
+            [X]Set
+            [X]200 default 500
+            [X]NODE.ENV
             /* eslint-disable-next line no-unused*/
-        [] 
+        [X] 
 
+        
 []Model DB
     []What data will we store?
         []Log places that people/places are not following current guidelines - TEXT 
@@ -130,4 +138,5 @@ Deliverables 1:
 []Setup Map SDK on client 
 []List all log entries on map
 []Deploy to Heroku 
+ alexbranch1
     []rewatch class on how to do it. 
