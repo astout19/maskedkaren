@@ -1,3 +1,8 @@
+// importing
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
 /* eslint-disable no-template-curly-in-string */
 const express = require('express');
 const morgan = require('morgan');
@@ -38,3 +43,5 @@ app.listen(port, () => {
 });
 // eslint-disable-next-line no-multiple-empty-lines
 
+// rendering
+ReactDOM.render(<App />, document.getElementById('root'));
