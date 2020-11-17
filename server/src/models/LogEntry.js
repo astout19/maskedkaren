@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 
+// eslint-disable-next-line no-unused-vars
 const requiredString = {
   type: String,
   requires: true,

@@ -33,8 +33,10 @@ Deliverables 1:
     []A screenshot of your Project Management Board that shows breakdown of tasks, assigned to group members with a schedule.  
         []Saturday we will come together to plan out past the Server Section of the breakdown below.    
 
-[]Setup Server
-alexbranch1
+
+[X]Setup Server
+
+ main
         [X]mkdir server
     []Install Dependencies
         [X]express
@@ -91,43 +93,43 @@ alexbranch1
             /* eslint-disable-next line no-unused*/
         [X] 
 
- alexbranch2
+ 
 [X]Model DB
-=======
-        
 
-    []What data will we store?
-        []Log places that people/places are not following current guidelines - TEXT 
-            []Date visited -DATE/TIME
-            []Lat and Long?
-                []Address? 
-            []Picture of location/people
-            []Description 
+    [X]What data will we store?
+        [X]Log places that people/places are not following current guidelines - TEXT 
+            [X]Date visited -DATE/TIME
+            [X]Lat and Long?
+                [X]Address? 
+            [X]Picture of location/people
+            [X]Description 
+
+ 
 
 
-[X]Setup Mongooge Model(s)
-    []install mongoose if you do not have. 
-    []Models (schema) required/true
-        []log entry - 
-        []title: string
-        []description: string,
-        []comments: string,
-        []rating: number? Min 0/Max 10/default 0?
-        []image: string
-        []date: date/default at .now
-        []lat: number/required
-            []...requiredNumber, 
-                []min: -90,
-                []max: 90,
-        []long: number/required
-            []...requiredNumber,
-                []min: -180,
-                []max: 180,
+[X]Setup Mongoose Model(s)
+    [X]install mongoose if you do not have. 
+    [X]Models (schema) required/true
+        [X]log entry - 
+        [X]title: string
+        [X]description: string,
+        [X]comments: string,
+        [X]rating: number? Min 0/Max 10/default 0?
+        [X]image: string
+        [X]date: date/default at .now
+        [X]lat: number/required
+            [X]...requiredNumber, 
+                [X]min: -90,
+                [X]max: 90,
+        [X]long: number/required
+            [X]...requiredNumber,
+                [X]min: -180,
+                [X]max: 180,
 [X].env file 
-    []NODE_ENV=development
-    []PORT=0000
-    []DATABASE_URL=mongodb://localhost/maskedkaren
-    []CORS_ORIGIN=http://localhost:0000     
+    [X]NODE_ENV=development
+    [X]PORT=0000
+    [X]DATABASE_URL=mongodb://localhost/maskedkaren
+    [X]CORS_ORIGIN=http://localhost:1337     
 
 []POST/logs
     []Create a new log entry
