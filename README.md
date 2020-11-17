@@ -31,7 +31,7 @@ Deliverables 1:
     []A screenshot of your Project Management Board that shows breakdown of tasks, assigned to group members with a schedule.  
         []Saturday we will come together to plan out past the Server Section of the breakdown below.    
 
-[]Setup Server
+[X]Setup Server
         [X]mkdir server
     []Install Dependencies
         [X]express

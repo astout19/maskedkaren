@@ -1,22 +1,24 @@
 const { Router } = require('express');
 
+// eslint-disable-next-line import/no-unresolved
+const LogEntry = require('../models/LogEntry');
+
 const router = Router();
 
-router.get('/', (req, res) => {
-  res.json({
-    message: 'this is a message',
-  });
+router.get('/', async (req, res) => {
+  const entries = await LogEntry.find();
+  res.json(entries);
 });
 
 router.post('/', async (req, res, next) => {
   try {
-    // eslint-disable-next-line new-cap
-    const logEntry = new logEntry(req.body);
+    const logEntry = new LogEntry(req.body);
     const createdEntry = await logEntry.save();
     res.json(createdEntry);
   } catch (error) {
-    // eslint-disable-next-line no-undef
-    Console.log(error.constructor.name);
+    if (error.name === 'ValidationError') {
+      res.status(422);
+    }
     next(error);
   }
 });

@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 
 require('dotenv').config();
 
+// eslint-disable-next-line import/no-unresolved
 const middlewares = require('./middlewares');
 const logs = require('./api/logs');
 
@@ -34,7 +35,6 @@ app.get('/', (req, res) => {
 app.use('/api/logs', logs);
 
 app.use(middlewares.notFound);
-
 app.use(middlewares.errorHandler);
 
 const port = process.env.PORT || 1337;
