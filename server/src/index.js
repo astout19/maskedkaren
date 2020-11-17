@@ -1,3 +1,8 @@
+// importing
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
 /* eslint-disable no-template-curly-in-string */
 const express = require('express');
 const morgan = require('morgan');
@@ -8,9 +13,11 @@ const mongoose = require('mongoose');
 
 require('dotenv').config();
 
+
 // eslint-disable-next-line import/no-unresolved
 const middlewares = require('./middlewares');
 const logs = require('./api/logs');
+
 
 const app = express();
 
@@ -44,3 +51,5 @@ app.listen(port, () => {
 });
 // eslint-disable-next-line no-multiple-empty-lines
 
+// rendering
+ReactDOM.render(<App />, document.getElementById('root'));

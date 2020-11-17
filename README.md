@@ -21,7 +21,9 @@ Deliverables 1:
         []Paul - Front end 
         []Heather - API for guidelines
         []Marina - Data by location/Map
+ alexbranch1
         [X]Alexandra - Repo/Setup Server
+
     []A schedule for completion of various tasks
         []Paul - Saturday 11/7
         []Heather - Saturday 11/7
@@ -31,7 +33,10 @@ Deliverables 1:
     []A screenshot of your Project Management Board that shows breakdown of tasks, assigned to group members with a schedule.  
         []Saturday we will come together to plan out past the Server Section of the breakdown below.    
 
+
 [X]Setup Server
+
+ main
         [X]mkdir server
     []Install Dependencies
         [X]express
@@ -66,17 +71,21 @@ Deliverables 1:
             [X]const cors =require('cors');
             [X]app.us(cors());
                 [X]origin: 'http://localhost:0000',
+
         []parse (express.json)
         []folder src
             []index.js
                 []const express = require('express');
+ alexbranch1
     [X]Setup Not Found and Error Middlewares
         [X]app.get('/',(req,res))
         [X]app.use((req, res,next) => {
+
             const error = new Error('your path is not found - ${req.orignalUrl}');
             res.status(404);
             next(error);
         });
+alexbranch1
         [X]Status Code 
             [X]Set
             [X]200 default 500
@@ -84,7 +93,9 @@ Deliverables 1:
             /* eslint-disable-next line no-unused*/
         [X] 
 
+ 
 [X]Model DB
+
     [X]What data will we store?
         [X]Log places that people/places are not following current guidelines - TEXT 
             [X]Date visited -DATE/TIME
@@ -92,6 +103,8 @@ Deliverables 1:
                 [X]Address? 
             [X]Picture of location/people
             [X]Description 
+
+ 
 
 
 [X]Setup Mongoose Model(s)
@@ -130,4 +143,5 @@ Deliverables 1:
 []Setup Map SDK on client 
 []List all log entries on map
 []Deploy to Heroku 
+ alexbranch1
     []rewatch class on how to do it. 
