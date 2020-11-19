@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 /* eslint-disable no-template-curly-in-string */
 const express = require('express');
@@ -10,6 +11,9 @@ const helmet = require('helmet');
 const cors = require('cors');
 // eslint-disable-next-line import/no-unresolved
 const mongoose = require('mongoose');
+
+const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
 require('dotenv').config();
 
@@ -52,4 +56,13 @@ app.listen(port, () => {
 // eslint-disable-next-line no-multiple-empty-lines
 
 // rendering
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <Auth0Provider
+      domain={domain}
+      clientId={clientId}
+      redirectUri={window.location.origin}>
+      <App />
+  </Auth0Provider>,
+  document.getElementById('root')
+);
+
