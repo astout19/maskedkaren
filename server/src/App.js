@@ -2,7 +2,6 @@ import React from 'react';
 import Container from './components/Container';
 import LoginButton from './components/LoginButton';
 import LogoutButton from './components/LogoutButton';
-import Profile from './components/Profile';
 import { useAuth0 } from '@auth0/auth0-react'
 import Header from './components/Header';
 import Content from './components/Content';
@@ -19,7 +18,6 @@ function App() {
     <Container>
       <LoginButton />
       <LogoutButton />
-      <Profile />
       <Header />
       <Content />
       <Map />
