@@ -1,8 +1,8 @@
 // importing
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import { Auth0Provider } from '@auth0/auth0-react';
+import App from './App';
 
 /* eslint-disable no-template-curly-in-string */
 const express = require('express');
@@ -17,11 +17,9 @@ const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
 require('dotenv').config();
 
-
 // eslint-disable-next-line import/no-unresolved
 const middlewares = require('./middlewares');
 const logs = require('./api/logs');
-
 
 const app = express();
 
@@ -63,6 +61,5 @@ ReactDOM.render(
       redirectUri={window.location.origin}>
       <App />
   </Auth0Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
-
