@@ -1,10 +1,10 @@
-import React from "react";
-import "../styles/Header.css";
+import React from 'react';
+import '../styles/Header.css';
 
 // Component for header
 function Header() {
     return (
-        <header className="header">
+        <header className='header'>
             <h1>Masked Karen</h1>
         </header>
     );
