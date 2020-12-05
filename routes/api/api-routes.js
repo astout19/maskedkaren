@@ -1,8 +1,8 @@
 const express = require("express");
-const app = express();
-const stateGuidelines = require("../data/covid-state-data");
+const router = express();
+const stateGuidelines = require("../../data/covid-state-data");
 
-app.get("/api/stateGuidlines/:state", function(req, res) {
+router.get("/api/stateGuidlines/:state", function(req, res) {
     var chosen = req.params.state;
   
   
@@ -15,3 +15,4 @@ app.get("/api/stateGuidlines/:state", function(req, res) {
     return res.json(false);
   });
   
+  module.exports = router;

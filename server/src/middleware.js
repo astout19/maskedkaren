@@ -15,7 +15,6 @@ const errorHandler = (error, req, res, next) => {
   });
 };
 
-export default {
-  notFound,
-  errorHandler,
-};
+// eslint-disable-next-line no-unused-expressions
+module.exports = notFound;
+module.exports = errorHandler;

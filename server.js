@@ -1,14 +1,17 @@
 // import { notFound } from './src/middleware';
 // import {errorHandler} from './src/middleware';
+const express = require("express");
+const morgan = require("morgan");
+const helmet = require("helmet");
+const cors = require("cors");
+const mongoose = require("mongoose");
+const middleware = require("./server/src/middleware")
+const port = process.env.PORT || 1337;
 
-import express, { json } from 'express';
-import morgan from 'morgan';
-import helmet from 'helmet';
-import cors from 'cors';
 // eslint-disable-next-line import/no-unresolved
-import { connect } from 'mongoose';
-import logs from './routes/api/logs';
-import routes from './routes/api-routes';
+const logs = require("./routes/api/logs")
+const routes = require("./routes/api/api-routes")
+
 
 require('dotenv').config();
 
@@ -16,7 +19,7 @@ require('dotenv').config();
 
 const app = express();
 
-connect(process.env.DATABASE_URL, {
+mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -26,7 +29,6 @@ app.use(helmet());
 app.use(cors({
   origin: process.env.CORS_ORIGIN,
 }));
-app.use(json());
 
 app.get('/', (req, res) => {
   res.json({
@@ -37,10 +39,8 @@ app.get('/', (req, res) => {
 app.use(',/src/api/logs', logs);
 app.use('./routes/api-routes', routes);
 
-// app.use(middleware.notFound);
-// app.use(middleware.errorHandler);
-
-const port = process.env.PORT || 1337;
+app.use(middleware.notFound);
+app.use(middleware.errorHandler);
 
 app.listen(port, () => {
   // eslint-disable-next-line no-console

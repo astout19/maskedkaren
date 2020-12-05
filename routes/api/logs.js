@@ -1,7 +1,7 @@
 const { Router } = require('express');
 
 // eslint-disable-next-line import/no-unresolved
-const LogEntry = require('../models/LogEntry');
+const LogEntry = require('../../models/LogEntry');
 
 const router = Router();
 
