@@ -141,7 +141,12 @@ alexbranch1
 []Setup Client 
 []Create Form to add a new entry
 []Setup Map SDK on client 
-[]List all log entries on map
-[]Deploy to Heroku 
- alexbranch1
+    []breakdown county 
+    []Google Map?? 
+[]List all log entries on map (Marina)
+[]Basic information for each state API COVID (Heather)
+[]Login Set Up - Auto Zero (Paul)
+    [X]Paul research programs 
+    []User 
+[]Deploy to Heroku (Alexandra)
     []rewatch class on how to do it. 
